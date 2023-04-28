@@ -73,9 +73,27 @@
       footer p {
         margin: 0;
       }
+      #ip-display {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        background-color: #1c1c1c;
+      }
+      #ip-display p {
+        margin: 0;
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
     </style>
-  </head>
-  <body>
+</head>
+<body>
+    <div id="ip-display">
+      <?php
+        $user_ip = $_SERVER['REMOTE_ADDR'];
+        echo "<p>Your IP address is: $user_ip</p>";
+      ?>
+    </div>
     <header>
       <div></div>
       <nav>
@@ -92,5 +110,5 @@
     <footer>
       <p>&copy; 2023 The ddthekidd Network</p>
     </footer>
-  </body>
-</html>
+</body>
+</
