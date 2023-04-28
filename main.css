@@ -28,7 +28,7 @@ nav {
   justify-content: center;
   align-items: center;
   height: 100%;
-  margin-left: 1rem; /* add this line to shift buttons to the left */
+  margin-left: -1rem;
 }
 
 nav a {
