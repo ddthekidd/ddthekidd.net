@@ -1,5 +1,15 @@
 <!DOCTYPE html>
 <html>
+    <footer>
+  <p>Welcome! <span id="visitor-ip"></span></p>
+</footer>
+
+<script src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+<script>
+  function getIP(json) {
+    document.getElementById("visitor-ip").innerHTML = json.ip;
+  }
+</script>
 <head>
     <meta charset="UTF-8">
     <title>The ddthekidd Network</title>
