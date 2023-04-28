@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="UTF-8">
     <title>The ddthekidd Network</title>
     <style>
@@ -45,11 +45,6 @@
       nav button:hover {
         background-color: #1976d2;
       }
-      nav span {
-        color: #fff;
-        margin-right: 1rem;
-        font-size: 1.2rem;
-      }
       main {
         display: flex;
         flex-direction: column;
@@ -78,13 +73,28 @@
       footer p {
         margin: 0;
       }
+      #ip-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #1c1c1c;
+        color: #fff;
+        height: 50px;
+        position: fixed;
+        top: 50px;
+        width: 100%;
+        z-index: 10;
+      }
+      #ip-container p {
+        margin: 0;
+        font-size: 1.2rem;
+      }
     </style>
   </head>
   <body>
     <header>
-      <div></div>
+      <div id="ip-container"></div>
       <nav>
-        <span id="ip"></span>
         <button>Home</button>
         <button>About</button>
         <button>Status</button>
@@ -98,6 +108,5 @@
     <footer>
       <p>&copy; 2023 The ddthekidd Network</p>
     </footer>
-    <script src="script.js"></script>
-  </body>
-</html>
+    <script>
+      const ipElement = document.getElementById("ip-container");
