@@ -73,27 +73,22 @@
       footer p {
         margin: 0;
       }
-      #ip-display {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 1rem;
-        background-color: #1c1c1c;
-      }
-      #ip-display p {
-        margin: 0;
-        font-size: 1.2rem;
-        font-weight: bold;
-      }
     </style>
-</head>
-<body>
-    <div id="ip-display">
-      <?php
-        $user_ip = $_SERVER['REMOTE_ADDR'];
-        echo "<p>Your IP address is: $user_ip</p>";
-      ?>
-    </div>
+    <script>
+      const ipElement = document.getElementById("ip");
+
+      fetch("https://api.ipify.org/?format=json")
+        .then((response) => response.json())
+        .then((data) => {
+          const ip = data.ip;
+          ipElement.textContent = ip;
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    </script>
+  </head>
+  <body>
     <header>
       <div></div>
       <nav>
@@ -106,9 +101,9 @@
     <main>
       <h2>Welcome to the ddthekidd Network!</h2>
       <p>We provide hosting services in Chicago, IL for Minecraft, Plex, STORJ, Flightradar24 and more!</p>
+      <p>Your IP address is: <span id="ip"></span></p>
     </main>
     <footer>
       <p>&copy; 2023 The ddthekidd Network</p>
     </footer>
-</body>
-</
+  </body
