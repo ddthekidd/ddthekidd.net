@@ -1,6 +1,6 @@
 /* Add animation to the header when the user scrolls down */
 header {
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 5000%;
   z-index: 1;
