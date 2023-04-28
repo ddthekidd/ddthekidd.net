@@ -52,7 +52,7 @@
         justify-content: center;
         min-height: 100vh;
         background-color: rgba(0, 0, 0, 0.5);
-        padding-top: 50px;
+        padding-top: 100px; /* increase padding to make room for IP display */
       }
       main h2 {
         font-size: 3rem;
@@ -73,7 +73,21 @@
       footer p {
         margin: 0;
       }
+      /* center IP display */
+      #ip-display {
+        position: fixed;
+        top: 50%; 
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 1.2rem;
+        color: #fff;
+      }
     </style>
+    <script type="text/javascript">
+      function getIP(json) {
+        document.getElementById("ip-display").innerHTML = "Your IP: " + json.ip;
+      }
+    </script>
   </head>
   <body>
     <header>
@@ -86,11 +100,9 @@
       </nav>
     </header>
     <main>
+      <div id="ip-display"></div> <!-- add div for IP display -->
       <h2>Welcome to the ddthekidd Network!</h2>
       <p>We provide hosting services in Chicago, IL for Minecraft, Plex, STORJ, Flightradar24 and more!</p>
     </main>
     <footer>
-      <p>&copy; 2023 The ddthekidd Network</p>
-    </footer>
-  </body>
-</html>
+      <p>&copy; 2023 The ddthekidd Network
