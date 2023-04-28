@@ -4,12 +4,3 @@ header {
   top: 0;
   width: 100%;
   z-index: 1;
-  background-color: #1c1c1c;
-  transition: top 0.5s ease-in-out;
-}
-
-/* Make the logo even bigger */
-.logo {
-  height: 500px;
-  width: auto;
-}
