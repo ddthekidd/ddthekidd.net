@@ -104,3 +104,12 @@ footer p {
   height: 500px;
   width: auto;
 }
+
+.ip {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  font-size: 1.2rem;
+  color: #fff;
+  z-index: 10;
+}
