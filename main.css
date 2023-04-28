@@ -8,8 +8,8 @@ header {
   transition: top 0.5s ease-in-out;
 }
 
-/* Make the logo bigger */
+/* Make the logo even bigger */
 .logo {
-  height: 250px;
+  height: 500px;
   width: auto;
 }
