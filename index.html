@@ -45,6 +45,11 @@
       nav button:hover {
         background-color: #1976d2;
       }
+      nav span {
+        color: #fff;
+        margin-right: 1rem;
+        font-size: 1.2rem;
+      }
       main {
         display: flex;
         flex-direction: column;
@@ -74,24 +79,12 @@
         margin: 0;
       }
     </style>
-    <script>
-      const ipElement = document.getElementById("ip");
-
-      fetch("https://api.ipify.org/?format=json")
-        .then((response) => response.json())
-        .then((data) => {
-          const ip = data.ip;
-          ipElement.textContent = ip;
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    </script>
   </head>
   <body>
     <header>
       <div></div>
       <nav>
+        <span id="ip"></span>
         <button>Home</button>
         <button>About</button>
         <button>Status</button>
@@ -101,9 +94,10 @@
     <main>
       <h2>Welcome to the ddthekidd Network!</h2>
       <p>We provide hosting services in Chicago, IL for Minecraft, Plex, STORJ, Flightradar24 and more!</p>
-      <p>Your IP address is: <span id="ip"></span></p>
     </main>
     <footer>
       <p>&copy; 2023 The ddthekidd Network</p>
     </footer>
-  </body
+    <script src="script.js"></script>
+  </body>
+</html>
