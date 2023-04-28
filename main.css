@@ -1,0 +1,15 @@
+/* Add animation to the header when the user scrolls down */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  background-color: #1c1c1c;
+  transition: top 0.5s ease-in-out;
+}
+
+/* Make the logo bigger */
+.logo {
+  height: 250px;
+  width: auto;
+}
