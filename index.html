@@ -16,20 +16,30 @@
       }
       header {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        padding: 1rem;
+        padding: 0.5rem 2rem;
         background-color: #1c1c1c;
+        height: 50px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 10;
       }
       nav {
         display: flex;
+        align-items: center;
       }
-      nav a {
+      nav button {
         color: #fff;
-        text-decoration: none;
-        padding: 1rem;
+        background-color: transparent;
+        border: none;
+        padding: 0.5rem 1rem;
+        margin-left: 1rem;
+        font-size: 1.2rem;
+        cursor: pointer;
       }
-      nav a:hover {
+      nav button:hover {
         background-color: #1976d2;
       }
       main {
@@ -39,6 +49,7 @@
         justify-content: center;
         min-height: 100vh;
         background-color: rgba(0, 0, 0, 0.5);
+        padding-top: 50px;
       }
       main h2 {
         font-size: 3rem;
@@ -59,37 +70,21 @@
       footer p {
         margin: 0;
       }
-      .logo {
-        height: 500px;
-        width: auto;
-      }
-      .status {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 2rem;
-      }
-      .status p {
-        margin-right: 1rem;
-        font-size: 1.2rem;
-      }
-      .status img {
-        height: 500px;
-        width: auto;
-      }
     </style>
   </head>
   <body>
     <header>
-      <img src="https://cdn.discordapp.com/attachments/1042240102719569961/1086512708964323440/ddthekiddNETLOGO.png" alt="ddthekidd Network logo" class="logo">
+      <div></div>
+      <nav>
+        <button>Button 1</button>
+        <button>Button 2</button>
+        <button>Button 3</button>
+        <button>Button 4</button>
+      </nav>
     </header>
     <main>
       <h2>Welcome to the ddthekidd Network!</h2>
       <p>We provide hosting services in Chicago, IL for Minecraft, Plex, STORJ, Flightradar24 and more!</p>
-      <div class="status">
-        <p>ddthekidd Network status</p>
-        <img src="https://healthchecks.io/badge/b7263287-e4cf-447e-b975-091cf6/EgMiUvaP.json" alt="ddthekidd Network status">
-      </div>
     </main>
     <footer>
       <p>&copy; 2023 The ddthekidd Network</p>
