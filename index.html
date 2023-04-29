@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>The ddthekidd Network</title>
-    <meta name="referrer" content="no-referrer-when-downgrade">
     <style>
       body {
         background-image: url("https://cdn.discordapp.com/attachments/1069342468304293918/1101336313673809931/IMG_8694.jpg");
@@ -76,12 +75,14 @@
       }
     </style>
     <script>
-        window.addEventListener('load', function () {
-            fetch('http://api.ipstack.com/check?access_key=136496a234ebe87f847635edb4f36c55')
-                .then(response => response.json())
-                .then(data => document.getElementById('ipAddress').textContent = `Your IP: ${data.ip}`)
-                .catch(error => console.error('Error getting IP address:', error));
-        });
+        async function getIP() {
+            const response = await fetch('https://api.ipstack.com/check?access_key=136496a234ebe87f847635edb4f36c55', {referrerPolicy: "no-referrer-when-downgrade"});
+            const data = await response.json();
+            const ip = data.ip;
+            document.getElementById("ip-address").textContent = ip;
+        }
+
+        window.addEventListener('load', getIP);
     </script>
 </head>
 <body>
@@ -96,8 +97,9 @@
     </header>
     <main>
         <h2>Welcome to the ddthekidd Network!</h2>
+        <p>Your IP address: <span id="ip-address">Loading...</span></p>
         <p>We provide hosting services in Chicago, IL for Minecraft, Plex, STORJ, Flightradar24 and more!</p>
-        <p id="ipAddress">IP address loading...</p>
     </main>
     <footer>
-        <p>&copy; 2023 The ddthekidd Network
+        <p>&copy; 2023 The ddthekidd Network</p>
+    </
