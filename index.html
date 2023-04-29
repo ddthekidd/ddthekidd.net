@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>The ddthekidd Network</title>
+    <meta name="referrer" content="no-referrer-when-downgrade">
     <style>
       body {
         background-image: url("https://cdn.discordapp.com/attachments/1069342468304293918/1101336313673809931/IMG_8694.jpg");
@@ -75,34 +76,28 @@
       }
     </style>
     <script>
-      function getIp() {
-        fetch('http://api.ipstack.com/check?access_key=136496a234ebe87f847635edb4f36c55')
-          .then(response => response.json())
-          .then(data => {
-            const ip = data.ip;
-            document.getElementById("ip-address").innerHTML = ip;
-          })
-          .catch(error => {
-            console.log("Error getting IP address:", error);
-            document.getElementById("ip-address").innerHTML = "Error getting IP address";
-          });
-      }
+        window.addEventListener('load', function () {
+            fetch('http://api.ipstack.com/check?access_key=136496a234ebe87f847635edb4f36c55')
+                .then(response => response.json())
+                .then(data => document.getElementById('ipAddress').textContent = `Your IP: ${data.ip}`)
+                .catch(error => console.error('Error getting IP address:', error));
+        });
     </script>
-  </head>
-  <body onload="getIp()">
+</head>
+<body>
     <header>
-      <div></div>
-      <nav>
-        <button>Home</button>
-        <button>About</button>
-        <button>Status</button>
-        <button>Contact</button>
-      </nav>
+        <div></div>
+        <nav>
+            <button>Home</button>
+            <button>About</button>
+            <button>Status</button>
+            <button>Contact</button>
+        </nav>
     </header>
     <main>
-      <h2>Welcome to the ddthekidd Network!</h2>
-      <p>Your IP: <span id="ip-address">Loading...</span></p>
-      <p>We provide hosting services in Chicago, IL for Minecraft, Plex, STORJ, Flightradar24 and more!</p>
+        <h2>Welcome to the ddthekidd Network!</h2>
+        <p>We provide hosting services in Chicago, IL for Minecraft, Plex, STORJ, Flightradar24 and more!</p>
+        <p id="ipAddress">IP address loading...</p>
     </main>
     <footer>
-      <p>&copy; 2023 The ddthekidd Network
+        <p>&copy; 2023 The ddthekidd Network
