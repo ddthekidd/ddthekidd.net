@@ -73,15 +73,13 @@ footer {
   justify-content: center;
   align-items: center;
   height: 5rem;
-  position: relative;
+  position: absolute;
   bottom: 0;
   width: 100%;
 }
 
 footer p {
   margin: 0;
-  text-align: center; /* added */
-  position: absolute; /* added */
-  bottom: 0; /* added */
-  width: 100%; /* added */
+  text-align: center;
 }
+
