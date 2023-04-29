@@ -99,10 +99,26 @@ footer p {
     align-items: flex-end;
   }
   
-  nav button {
-    margin: 0.5rem 0;
+  nav button:last-child {
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-right: 1rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  text-decoration: none;
   }
-  
+
+  nav button:last-child:hover {
+    background-color: #1976d2;
+  }
+
+  nav button:last-child:active {
+  background-color: #1976d2;
+  color: #fff;
+  }
+
   main {
     padding-top: 80px;
   }
