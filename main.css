@@ -1,4 +1,4 @@
-{
+body {
   background-image: url("https://cdn.discordapp.com/attachments/1069342468304293918/1101336313673809931/IMG_8694.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -81,6 +81,10 @@ footer {
   justify-content: center;
   align-items: center;
   height: 5rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 footer p {
@@ -102,4 +106,8 @@ footer p {
 .status img {
   height: 500px;
   width: auto;
+}
+
+body {
+  background-attachment: scroll;
 }
