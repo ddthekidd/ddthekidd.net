@@ -46,10 +46,14 @@
       nav button:hover, nav a:hover {
         background-color: #1976d2;
       }
-      nav button.ddthekidd {
-        background-color: #c0392b;
-        border-radius: 20px;
-        padding: 0.5rem 1rem;
+      nav a#network-button {
+        background-color: #1c1c1c;
+        border: 2px solid #fff;
+        padding: 0.4rem 1rem;
+        margin-right: 1rem;
+        font-size: 1.2rem;
+        cursor: pointer;
+        text-decoration: none;
       }
       main {
         display: flex;
@@ -87,9 +91,10 @@
       <nav>
         <a href="#">Home</a>
         <button onclick="window.open('https://ddthekidd.pingpong.host/en/status/', '_blank')">Status</button>
+        <a id="network-button" href="#">The ddthekidd Network</a>
         <button>About</button>
         <button>Contact</button>
-        <button class="ddthekidd">The ddthekidd Network</button>
+        &emsp;&emsp;&emsp;&emsp;
       </nav>
     </header>
     <main>
