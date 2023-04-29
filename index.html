@@ -13,7 +13,6 @@
         font-family: sans-serif;
         margin: 0;
         padding: 0;
-        overflow-y: hidden;
       }
       header {
         display: flex;
@@ -55,10 +54,7 @@
         color: #fff;
       }
       nav button:nth-of-type(4) {
-        background-color: #1976d2;
-      }
-      nav button:nth-of-type(4):hover {
-        background-color: #1c1c1c;
+        display: none;
       }
       header a {
         color: #fff;
@@ -95,14 +91,6 @@
       footer p {
         margin: 0;
       }
-      @media (max-width: 600px) {
-        nav {
-          flex-direction: column;
-        }
-        nav button {
-          margin-top: 1rem;
-        }
-      }
     </style>
   </head>
   <body>
@@ -110,7 +98,7 @@
       <div><a href="#"><h1>The ddthekidd Network</h1></a></div>
       <nav>
         <a href="#">Home</a>
-        <button>About</button
+        <button>About</button>
         <button onclick="window.open('https://ddthekidd.pingpong.host/en/', '_blank')">Status</button>
       </nav>
     </header>
