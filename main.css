@@ -1,3 +1,4 @@
+/* General styles */
 body {
   background-image: url("https://cdn.discordapp.com/attachments/1069342468304293918/1101336313673809931/IMG_8694.jpg");
   background-size: cover;
@@ -9,6 +10,7 @@ body {
   padding: 0;
 }
 
+/* Header styles */
 header {
   display: flex;
   justify-content: space-between;
@@ -45,15 +47,16 @@ nav button:hover {
   background-color: #1976d2;
 }
 
+/* Main content styles */
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh; /* changed from 200vh */
+  min-height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
   padding-top: 50px;
-  overflow-y: scroll; /* added */
+  overflow-y: scroll;
 }
 
 main h2 {
@@ -66,6 +69,7 @@ main p {
   margin: 0 0 2rem;
 }
 
+/* Footer styles */
 footer {
   background-color: #1c1c1c;
   color: #fff;
@@ -73,14 +77,51 @@ footer {
   justify-content: center;
   align-items: center;
   height: 5rem;
-  position: absolute;
+  position: relative;
   bottom: 0;
   width: 100%;
 }
 
 footer p {
   margin: 0;
-  text-align: center;
 }
 
-
+/* Mobile styles */
+@media (max-width: 600px) {
+  header {
+    padding: 0.5rem;
+  }
+  
+  nav {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  nav button {
+    margin: 0.5rem 0;
+  }
+  
+  main {
+    padding-top: 80px;
+  }
+  
+  main h2 {
+    font-size: 2.5rem;
+  }
+  
+  main p {
+    font-size: 1rem;
+  }
+  
+  footer {
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  footer p {
+    margin: 0.5rem 0;
+  }
+}
