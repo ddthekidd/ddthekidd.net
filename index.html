@@ -26,9 +26,6 @@
         width: 100%;
         z-index: 10;
       }
-      header div a {
-        color: #fff;
-      }
       nav {
         display: flex;
         align-items: center;
@@ -49,6 +46,19 @@
       nav button:hover, nav a:hover {
         background-color: #1976d2;
       }
+      /* Changes start here */
+      nav button:nth-of-type(3) {
+        background-color: #1c1c1c;
+        color: #fff;
+      }
+      header a {
+        color: #fff;
+        text-decoration: none;
+      }
+      header a:hover {
+        color: #1976d2;
+      }
+      /* Changes end here */
       main {
         display: flex;
         flex-direction: column;
@@ -58,7 +68,7 @@
         background-color: rgba(0, 0, 0, 0.5);
         padding-top: 50px;
       }
-      main div {
+      main h2 {
         font-size: 3rem;
         margin-bottom: 1rem;
       }
@@ -85,4 +95,13 @@
       <nav>
         <a href="#">Home</a>
         <button>About</button>
-        <button onclick="window.open('https://ddthekidd.ping
+        <button onclick="window.open('https://ddthekidd.pingpong.host/en/', '_blank')">Status</button>
+        <button>Contact</button>
+      </nav>
+    </header>
+    <main>
+      <h2>The ddthekidd Network</h2>
+      <p>We provide hosting services in Chicago, IL for Minecraft, Clone Hero, Plex, STORJ, Flightradar24 and more!</p>
+    </main>
+    <footer>
+      <p>&copy; 2023 The ddthekidd Network
