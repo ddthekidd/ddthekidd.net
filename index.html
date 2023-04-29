@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="UTF-8">
     <title>The ddthekidd Network</title>
     <style>
@@ -53,6 +53,7 @@
         min-height: 100vh;
         background-color: rgba(0, 0, 0, 0.5);
         padding-top: 50px;
+        overflow-y: scroll;
       }
       main h2 {
         font-size: 3rem;
@@ -66,12 +67,21 @@
         background-color: #1c1c1c;
         color: #fff;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         height: 5rem;
+        position: relative;
+        bottom: 0;
+        width: 100%;
       }
       footer p {
         margin: 0;
+      }
+      .badge {
+        position: fixed;
+        bottom: 1rem;
+        right: 1rem;
+        z-index: 10;
       }
     </style>
   </head>
@@ -91,6 +101,6 @@
     </main>
     <footer>
       <p>&copy; 2023 The ddthekidd Network</p>
-    </footer>
-  </body>
-</html>
+      <div class="badge">
+        <a href="https://ddthekidd.pingpong.host/"><img src="https://img.shields.io/pingpong/uptime/sp_255816214b324b59a0744c6ca44c3b22" alt="System Uptime"></a>
+      </div
