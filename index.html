@@ -73,23 +73,17 @@
       footer p {
         margin: 0;
       }
-      #ip-address {
-        background-color: #fff;
-        color: #000;
-        padding: 1rem;
-        text-align: center;
-        font-size: 1.2rem;
-        font-weight: bold;
-        position: absolute;
-        top: 0;
-        width: 100%;
-      }
     </style>
+    <script>
+      function getIP(json) {
+        document.getElementById("ip-address").innerHTML = "Your IP: " + json.ip;
+      }
+    </script>
+    <script src="https://api.ipgeolocation.io/ipgeo?apiKey=b31756549f9c5eb51c72ef916a5aae8b&callback=getIP"></script>
   </head>
   <body>
-    <div id="ip-address">Your IP: <?php echo $_SERVER['REMOTE_ADDR']; ?></div>
     <header>
-      <div></div>
+      <div><span id="ip-address">Loading...</span></div>
       <nav>
         <button>Home</button>
         <button>About</button>
