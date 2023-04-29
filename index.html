@@ -13,6 +13,10 @@
         font-family: sans-serif;
         margin: 0;
         padding: 0;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
       }
       header {
         display: flex;
@@ -87,13 +91,13 @@
         justify-content: center;
         align-items: center;
         height: 5rem;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
       }
       footer p {
         margin: 0;
       }
-      body {
-  overflow: hidden;}
-   } 
     </style>
   </head>
   <body>
@@ -102,15 +106,7 @@
       <nav>
         <a href="#">Home</a>
         <button>About</button>
-        <button onclick="window.open('https://ddthekidd.pingpong.host/en/', '_blank')">Status</button>
-      </nav>
-    </header>
-    <main>
-      <h2>Welcome to The ddthekidd Network!</h2>
-      <p>We provide hosting services in Chicago, IL for Minecraft, Clone Hero, Plex, STORJ, Flightradar24 and more!</p>
-    </main>
+        <button onclick="window.open('https://ddthekidd.pingpong.host/en/', '_blank')">Status</button
     <footer>
-      <p>&copy; 2023 The ddthekidd Network</p>
-    </footer>
-  </body>
-</html>
+  <p>&copy; 2023 The ddthekidd Network</p>
+</footer>
