@@ -61,9 +61,11 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
   padding-top: 60px;
+  height: auto;
+  min-height: calc(100vh - 60px);
+  overflow-y: scroll;
 }
 
 main h2 {
