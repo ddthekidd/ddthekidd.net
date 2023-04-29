@@ -74,14 +74,6 @@
         margin: 0;
       }
     </style>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
-      $(document).ready(function() {
-        $.getJSON('https://ipapi.co/json/', function(data) {
-          $('#ip').text("Your IP address is: " + data.ip);
-        });
-      });
-    </script>
 </head>
 <body>
   <header>
@@ -96,10 +88,21 @@
   <main>
     <h2>Welcome to the ddthekidd Network!</h2>
     <p>We provide hosting services in Chicago, IL for Minecraft, Plex, STORJ, Flightradar24 and more!</p>
-    <p id="ip"></p>
+    <p id="ip-address"></p>
   </main>
   <footer>
     <p>&copy; 2023 The ddthekidd Network</p>
   </footer>
-</body>
-</html>
+  
+  <script>
+    const apiKey = "YOUR_API_KEY";
+    fetch(`https://api.ipgeolocation.io/ipgeo?apiKey=${apiKey}`)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then(data => {
+        const ipAddress = data.ip;
+        document.getElementById("ip-address").innerText = `Your IP address is: ${ip
