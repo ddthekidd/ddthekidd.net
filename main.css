@@ -1,4 +1,4 @@
-body {
+{
   background-image: url("https://cdn.discordapp.com/attachments/1069342468304293918/1101336313673809931/IMG_8694.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -13,35 +13,45 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 1rem;
   background-color: #1c1c1c;
-  height: 50px;
+  height: 60px;
   position: fixed;
   top: 0;
-  width: 100%;
+  left: 0;
+  right: 0;
   z-index: 10;
 }
 
 nav {
   display: flex;
+  justify-content: center;
   align-items: center;
+  height: 100%;
+  margin-left: -1rem;
 }
 
-nav button {
+nav a {
   color: #fff;
-  background-color: transparent;
+  text-decoration: none;
+  padding: 0.5rem;
+}
+
+nav a:hover {
+  background-color: #1976d2;
+}
+
+button {
+  background-color: #1c1c1c;
   border: none;
-  padding: 0.5rem 1rem;
-  margin-right: 1rem;
-  font-size: 1.2rem;
+  color: #fff;
   cursor: pointer;
+  font-size: 1rem;
+  margin-right: 0.5rem;
+  padding: 0.5rem 1rem;
 }
 
-nav button:first-child {
-  margin-left: 0;
-}
-
-nav button:hover {
+button:hover {
   background-color: #1976d2;
 }
 
@@ -50,10 +60,9 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh; /* changed from 200vh */
+  min-height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
-  padding-top: 50px;
-  overflow-y: scroll; /* added */
+  padding-top: 60px;
 }
 
 main h2 {
@@ -73,11 +82,25 @@ footer {
   justify-content: center;
   align-items: center;
   height: 5rem;
-  position: relative; /* added */
-  bottom: 0; /* added */
-  width: 100%; /* added */
 }
 
 footer p {
   margin: 0;
+}
+
+.status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.status p {
+  margin-right: 1rem;
+  font-size: 1.2rem;
+}
+
+.status img {
+  height: 500px;
+  width: auto;
 }
