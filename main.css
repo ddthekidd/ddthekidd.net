@@ -47,22 +47,23 @@ nav button:hover {
   background-color: #1976d2;
 }
 
-/* ddthekidd Network button */
-nav #ddthekidd {
+/* Styles for "ddthekidd Network" button */
+nav #ddthekidd-network {
   color: #fff;
   background-color: transparent;
   border: none;
   padding: 0.5rem 1rem;
+  margin-right: 1rem;
   font-size: 1.2rem;
   cursor: pointer;
 }
 
-nav #ddthekidd:hover {
+nav #ddthekidd-network:hover {
   background-color: #1976d2;
 }
 
-nav #ddthekidd:active {
-  background-color: blue;
+nav #ddthekidd-network:active {
+  background-color: #0d47a1;
 }
 
 /* Main content styles */
@@ -118,14 +119,14 @@ footer p {
   }
   
   nav button:last-child {
-    color: #fff;
-    background-color: transparent;
-    border: none;
-    padding: 0.5rem 1rem;
-    margin-right: 1rem;
-    font-size: 1.2rem;
-    cursor: pointer;
-    text-decoration: none;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-right: 1rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  text-decoration: none;
   }
 
   nav button:last-child:hover {
@@ -133,9 +134,4 @@ footer p {
   }
 
   nav button:last-child:active {
-    background-color: #1976d2;
-    color: #fff;
-  }
-
-  /* ddthekidd Network button */
-  nav #ddthekidd {
+  background-color: #197
