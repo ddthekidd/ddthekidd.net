@@ -30,6 +30,13 @@
         display: flex;
         align-items: center;
       }
+      nav div a {
+        color: #fff;
+        background-color: transparent;
+        border: none;
+        text-decoration: none;
+        font-size: 2rem;
+      }
       nav a, nav button {
         color: #fff;
         background-color: transparent;
@@ -45,15 +52,6 @@
       }
       nav button:hover, nav a:hover {
         background-color: #1976d2;
-      }
-      nav a#network-button {
-        background-color: #1c1c1c;
-        border: 2px solid #fff;
-        padding: 0.4rem 1rem;
-        margin-right: 1rem;
-        font-size: 1.2rem;
-        cursor: pointer;
-        text-decoration: none;
       }
       main {
         display: flex;
@@ -87,14 +85,12 @@
   </head>
   <body>
     <header>
-      <div><a href="#"><h1>The ddthekidd Network</h1></a></div>
       <nav>
+        <div><a href="#" class="button-link">The ddthekidd Network</a></div>
         <a href="#">Home</a>
-        <button onclick="window.open('https://ddthekidd.pingpong.host/en/status/', '_blank')">Status</button>
-        <a id="network-button" href="#">The ddthekidd Network</a>
+        <button onclick="window.open('https://ddthekidd.pingpong.host', '_blank')">Status</button>
         <button>About</button>
         <button>Contact</button>
-        &emsp;&emsp;&emsp;&emsp;
       </nav>
     </header>
     <main>
