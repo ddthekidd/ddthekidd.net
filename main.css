@@ -80,10 +80,12 @@ footer {
   position: relative;
   bottom: 0;
   width: 100%;
+  text-align: center;
 }
 
 footer p {
   margin: 0;
+  text-align: center;
 }
 
 /* Mobile styles */
@@ -123,5 +125,15 @@ footer p {
   
   footer p {
     margin: 0.5rem 0;
+  }
+  
+  /* Move the 4 buttons to the left */
+  nav button {
+    margin-right: 0.5rem;
+  }
+  
+  /* Remove the extra scroll wheel on the side */
+  main {
+    overflow-y: auto;
   }
 }
