@@ -74,16 +74,11 @@
         margin: 0;
       }
     </style>
-    <script>
-      function getIP(json) {
-        document.getElementById("ip-address").innerHTML = "Your IP: " + json.ip;
-      }
-    </script>
-    <script src="https://api.ipgeolocation.io/ipgeo?apiKey=b31756549f9c5eb51c72ef916a5aae8b&callback=getIP"></script>
-  </head>
-  <body>
+</head>
+
+<body>
     <header>
-      <div><span id="ip-address">Loading...</span></div>
+      <div></div>
       <nav>
         <button>Home</button>
         <button>About</button>
@@ -94,9 +89,28 @@
     <main>
       <h2>Welcome to the ddthekidd Network!</h2>
       <p>We provide hosting services in Chicago, IL for Minecraft, Plex, STORJ, Flightradar24 and more!</p>
+      <p id="ip-address">Loading IP address...</p>
     </main>
     <footer>
       <p>&copy; 2023 The ddthekidd Network</p>
     </footer>
-  </body>
+
+    <script>
+      const ipUrl = 'https://ipapi.co/json/';
+      const ipAddressElement = document.getElementById('ip-address');
+
+      fetch(ipUrl)
+        .then(response => response.json())
+        .then(data => {
+          const ipAddress = data.ip;
+          ipAddressElement.innerText = `Your IP: ${ipAddress}`;
+        })
+        .catch(error => {
+          console.error(error);
+          ipAddressElement.innerText = `Error getting IP address: ${error.message}`;
+        });
+    </script>
+</body>
+
 </html>
+``
