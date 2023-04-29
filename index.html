@@ -74,35 +74,23 @@
         margin: 0;
       }
     </style>
-</head>
-<body>
-  <header>
-    <div></div>
-    <nav>
-      <button>Home</button>
-      <button>About</button>
-      <button>Status</button>
-      <button>Contact</button>
-    </nav>
-  </header>
-  <main>
-    <h2>Welcome to the ddthekidd Network!</h2>
-    <p>We provide hosting services in Chicago, IL for Minecraft, Plex, STORJ, Flightradar24 and more!</p>
-    <p id="ip-address"></p>
-  </main>
-  <footer>
-    <p>&copy; 2023 The ddthekidd Network</p>
-  </footer>
-  
-  <script>
-    const apiKey = "YOUR_API_KEY";
-    fetch(`https://api.ipgeolocation.io/ipgeo?apiKey=${apiKey}`)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.json();
-      })
-      .then(data => {
-        const ipAddress = data.ip;
-        document.getElementById("ip-address").innerText = `Your IP address is: ${ip
+  </head>
+  <body>
+    <header>
+      <div></div>
+      <nav>
+        <button>Home</button>
+        <button>About</button>
+        <button>Status</button>
+        <button>Contact</button>
+      </nav>
+    </header>
+    <main>
+      <h2>Welcome to the ddthekidd Network!</h2>
+      <p>We provide hosting services in Chicago, IL for Minecraft, Plex, STORJ, Flightradar24 and more!</p>
+    </main>
+    <footer>
+      <p>&copy; 2023 The ddthekidd Network</p>
+    </footer>
+  </body>
+</html>
