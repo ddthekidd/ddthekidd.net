@@ -73,9 +73,25 @@
       footer p {
         margin: 0;
       }
+      #ip {
+        font-size: 1.2rem;
+        margin-top: 10px;
+      }
     </style>
-</head>
-<body>
+    <script>
+      window.addEventListener('load', function() {
+        fetch('https://api.ipify.org/?format=json')
+          .then(function(response) {
+            return response.json();
+          })
+          .then(function(data) {
+            var ip = data.ip;
+            document.getElementById('ip').innerHTML = 'Your IP: ' + ip;
+          });
+      });
+    </script>
+  </head>
+  <body>
     <header>
       <div></div>
       <nav>
@@ -88,21 +104,7 @@
     <main>
       <h2>Welcome to the ddthekidd Network!</h2>
       <p>We provide hosting services in Chicago, IL for Minecraft, Plex, STORJ, Flightradar24 and more!</p>
-      <div id="ip-display">
-        <p>Your IP: <span id="ip-address"></span></p>
-      </div>
+      <div id="ip"></div>
     </main>
     <footer>
-      <p>&copy; 2023 The ddthekidd Network</p>
-    </footer>
-    <script>
-        window.addEventListener('load', function() {
-            fetch('https://api.ipify.org')
-                .then(response => response.text())
-                .then(data => {
-                    document.querySelector('#ip-address').innerHTML = data;
-                });
-        });
-    </script>
-</body>
-</html>
+      <p>&copy; 2023 The ddthekidd Network
