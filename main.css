@@ -90,18 +90,30 @@ footer {
   background-color: #1c1c1c;
   color: #fff;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   height: 5rem;
   position: relative;
   bottom: 0;
   width: 100%;
   text-align: center;
+  padding: 0 2rem;
 }
 
 footer p {
   margin: 0;
   text-align: center;
+}
+
+footer .footer-buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 50%;
+}
+
+footer .footer-buttons button {
+  margin-right: 1rem;
 }
 
 /* Mobile styles */
@@ -127,18 +139,4 @@ footer p {
   }
 
   nav button:last-child:hover {
-    background-color: #1976d2;
-  }
-
-  nav button:last-child:active {
-  background-color: #1976d2;
-  color: #fff;
-  }
-
-  main {
-    padding-top: 80px;
-  }
-  
-  main h2 {
-    font-size: 2.5rem;
-  }
+   
