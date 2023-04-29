@@ -74,9 +74,22 @@
         margin: 0;
       }
     </style>
-</head>
-
-<body>
+    <script>
+      function getIp() {
+        fetch('http://api.ipstack.com/check?access_key=136496a234ebe87f847635edb4f36c55')
+          .then(response => response.json())
+          .then(data => {
+            const ip = data.ip;
+            document.getElementById("ip-address").innerHTML = ip;
+          })
+          .catch(error => {
+            console.log("Error getting IP address:", error);
+            document.getElementById("ip-address").innerHTML = "Error getting IP address";
+          });
+      }
+    </script>
+  </head>
+  <body onload="getIp()">
     <header>
       <div></div>
       <nav>
@@ -88,29 +101,8 @@
     </header>
     <main>
       <h2>Welcome to the ddthekidd Network!</h2>
+      <p>Your IP: <span id="ip-address">Loading...</span></p>
       <p>We provide hosting services in Chicago, IL for Minecraft, Plex, STORJ, Flightradar24 and more!</p>
-      <p id="ip-address">Loading IP address...</p>
     </main>
     <footer>
-      <p>&copy; 2023 The ddthekidd Network</p>
-    </footer>
-
-    <script>
-      const ipUrl = 'https://ipapi.co/json/';
-      const ipAddressElement = document.getElementById('ip-address');
-
-      fetch(ipUrl)
-        .then(response => response.json())
-        .then(data => {
-          const ipAddress = data.ip;
-          ipAddressElement.innerText = `Your IP: ${ipAddress}`;
-        })
-        .catch(error => {
-          console.error(error);
-          ipAddressElement.innerText = `Error getting IP address: ${error.message}`;
-        });
-    </script>
-</body>
-
-</html>
-``
+      <p>&copy; 2023 The ddthekidd Network
