@@ -47,6 +47,24 @@ nav button:hover {
   background-color: #1976d2;
 }
 
+/* ddthekidd Network button */
+nav #ddthekidd {
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+nav #ddthekidd:hover {
+  background-color: #1976d2;
+}
+
+nav #ddthekidd:active {
+  background-color: blue;
+}
+
 /* Main content styles */
 main {
   display: flex;
@@ -100,14 +118,14 @@ footer p {
   }
   
   nav button:last-child {
-  color: #fff;
-  background-color: transparent;
-  border: none;
-  padding: 0.5rem 1rem;
-  margin-right: 1rem;
-  font-size: 1.2rem;
-  cursor: pointer;
-  text-decoration: none;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-decoration: none;
   }
 
   nav button:last-child:hover {
@@ -115,41 +133,9 @@ footer p {
   }
 
   nav button:last-child:active {
-  background-color: #1976d2;
-  color: #fff;
+    background-color: #1976d2;
+    color: #fff;
   }
 
-  main {
-    padding-top: 80px;
-  }
-  
-  main h2 {
-    font-size: 2.5rem;
-  }
-  
-  main p {
-    font-size: 1rem;
-  }
-  
-  footer {
-    height: auto;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-  }
-  
-  footer p {
-    margin: 0.5rem 0;
-  }
-  
-  /* Move the 4 buttons to the left */
-  nav button {
-    margin-right: 0.5rem;
-  }
-  
-  /* Remove the extra scroll wheel on the side */
-  main {
-    overflow-y: auto;
-  }
-}
+  /* ddthekidd Network button */
+  nav #ddthekidd {
