@@ -13,6 +13,7 @@
         font-family: sans-serif;
         margin: 0;
         padding: 0;
+        overflow-y: hidden;
       }
       header {
         display: flex;
@@ -55,7 +56,6 @@
       }
       nav button:nth-of-type(4) {
         background-color: #1976d2;
-        display: none;
       }
       nav button:nth-of-type(4):hover {
         background-color: #1c1c1c;
@@ -91,30 +91,26 @@
         justify-content: center;
         align-items: center;
         height: 5rem;
-        position: fixed;
-        bottom: 0;
-        width: 100%;
       }
       footer p {
         margin: 0;
       }
-      /* Hide scrollbar for desktop versions */
-      @media (min-width: 768px) {
-        body::-webkit-scrollbar {
-          width: 0.4em;
+      @media (max-width: 600px) {
+        nav {
+          flex-direction: column;
         }
-        body::-webkit-scrollbar-thumb {
-          background-color: rgba(255,255,255,0.5);
+        nav button {
+          margin-top: 1rem;
         }
       }
     </style>
   </head>
   <body>
     <header>
-      <div><a href="#"><h1>The ddthekidd Network
+      <div><a href="#"><h1>The ddthekidd Network</h1></a></div>
       <nav>
         <a href="#">Home</a>
-        <button>About</button>
+        <button>About</button
         <button onclick="window.open('https://ddthekidd.pingpong.host/en/', '_blank')">Status</button>
       </nav>
     </header>
