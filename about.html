@@ -1,111 +1,123 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — The ddthekidd Network</title>
   <link rel="shortcut icon" type="image/x-icon" href="ddpic.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
 </head>
-    <meta charset="UTF-8">
-    <title>The ddthekidd Network</title>
-    <style>
-      body {
-        background-image: url("background.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        color: #fff;
-        font-family: sans-serif;
-        margin: 0;
-        padding: 0;
-      }
-      header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0.5rem 2rem;
-        background-color: #1c1c1c;
-        height: 50px;
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 10;
-      }
-      nav {
-        display: flex;
-        align-items: center;
-      }
-      nav div a {
-        color: #fff;
-        background-color: transparent;
-        border: none;
-        text-decoration: none;
-        font-size: 2rem;
-      }
-      nav a, nav button {
-        color: #fff;
-        background-color: transparent;
-        border: none;
-        padding: 0.5rem 1rem;
-        margin-right: 1rem;
-        font-size: 1.2rem;
-        cursor: pointer;
-        text-decoration: none;
-      }
-      nav a:first-child, nav button:first-child {
-        margin-left: 0;
-      }
-      nav button:hover, nav a:hover {
-        background-color: #1976d2;
-      }
-      main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        min-height: 100vh;
-        background-color: rgba(0, 0, 0, 0.5);
-        padding-top: 50px;
-      }
-      main h2 {
-        font-size: 3rem;
-        margin-bottom: 1rem;
-      }
-      main p {
-        font-size: 1.2rem;
-        margin: 0 0 2rem;
-      }
-      footer {
-        background-color: #1c1c1c;
-        color: #fff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 5rem;
-      }
-      footer p {
-        margin: 0;
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <div><a href="index.html" class="button-link">The ddthekidd Network</a></div>
-        <a href="index.html">Home</a>
-        <a class="nav-link" href="https://ddthekidd.statuspage.io/">Status</a>
-        <button onclick="window.location.href='about.html'">About</button>
-        <button onclick="window.location.href='contact.html'">Contact</button>
-        <a class="nav-link" href="https://www.github.com/ddthekidd" target="_blank">GitHub</a>
-      </nav>
-    </header>
-    <main>
-      <h2>About Us</h2>
-      <style>
-  p {
-    text-align: center;
-  }
-</style>
+<body>
 
-<p>With our gigabit fiber speeds, backup connection and battery backup in Chicago, IL, we can host just about anything you need, Contact us for more info.</p>
-    </main>
-    <footer>
-      <p>&copy; 2026 The ddthekidd Network</p>
-    </footer>
+  <!-- Background -->
+  <div class="bg-wrapper"></div>
+  <div class="bg-overlay"></div>
+
+  <!-- Navigation -->
+  <header>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">The <em>dd</em>thekidd Network</a>
+
+      <button class="hamburger" id="hamburger" aria-label="Open navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li class="status-pill"><a href="https://ddthekidd.statuspage.io/" target="_blank" rel="noopener">● Status</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="https://www.github.com/ddthekidd" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+
+    <div class="page-hero">
+      <h1 class="page-title">About <em>Us</em></h1>
+      <p class="page-sub">
+        A homelab-turned-hosting-network running out of Chicago, IL —
+        built for reliability and community.
+      </p>
+    </div>
+
+    <div class="page-content">
+      <div class="glass-card">
+        <p>
+          With gigabit fiber speeds, a redundant backup connection, and battery-backed
+          power infrastructure right here in Chicago, IL, we can host just about anything
+          you need. From game servers to mesh networking nodes to media and distributed
+          storage — if it runs on a server, we can probably run it.
+          Reach out to find out more.
+        </p>
+
+        <div class="specs-grid">
+          <div class="spec-item">
+            <div class="spec-value">1 Gbps</div>
+            <div class="spec-label">Primary fiber speed</div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-value">UPS</div>
+            <div class="spec-label">Battery backup power</div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-value">2×</div>
+            <div class="spec-label">Redundant connections</div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-value">24 / 7</div>
+            <div class="spec-label">Always-on uptime</div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-value">Chicago</div>
+            <div class="spec-label">Illinois, USA</div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-value">7+</div>
+            <div class="spec-label">Active hosted services</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-copy">© 2026 The ddthekidd Network</span>
+      <ul class="footer-links" role="list">
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="https://ddthekidd.statuspage.io/" target="_blank" rel="noopener">Status</a></li>
+        <li><a href="https://www.github.com/ddthekidd" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('navLinks');
+
+    hamburger.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      hamburger.classList.toggle('open', isOpen);
+      hamburger.setAttribute('aria-expanded', isOpen);
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+        navLinks.classList.remove('open');
+        hamburger.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', false);
+      }
+    });
+  </script>
+
+</body>
+</html>

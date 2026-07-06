@@ -1,108 +1,142 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The ddthekidd Network</title>
   <link rel="shortcut icon" type="image/x-icon" href="ddpic.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
 </head>
-    <meta charset="UTF-8">
-    <title>The ddthekidd Network</title>
-    <style>
-      body {
-        background-image: url("background.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        color: #fff;
-        font-family: sans-serif;
-        margin: 0;
-        padding: 0;
-      }
-      header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0.5rem 2rem;
-        background-color: #1c1c1c;
-        height: 50px;
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 10;
-      }
-      nav {
-        display: flex;
-        align-items: center;
-      }
-      nav div a {
-        color: #fff;
-        background-color: transparent;
-        border: none;
-        text-decoration: none;
-        font-size: 2rem;
-      }
-      nav a, nav button {
-        color: #fff;
-        background-color: transparent;
-        border: none;
-        padding: 0.5rem 1rem;
-        margin-right: 1rem;
-        font-size: 1.2rem;
-        cursor: pointer;
-        text-decoration: none;
-      }
-      nav a:first-child, nav button:first-child {
-        margin-left: 0;
-      }
-      nav button:hover, nav a:hover {
-        background-color: #1976d2;
-      }
-      main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        min-height: 100vh;
-        background-color: rgba(0, 0, 0, 0.5);
-        padding-top: 50px;
-      }
-      main h2 {
-        font-size: 3rem;
-        margin-bottom: 1rem;
-      }
-      main p {
-        font-size: 1.2rem;
-        margin: 0 0 2rem;
-      }
-      footer {
-        background-color: #1c1c1c;
-        color: #fff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 5rem;
-      }
-      footer p {
-        margin: 0;
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <div><a href="index.html" class="button-link">The ddthekidd Network</a></div>
-        <a href="index.html">Home</a>
-        <a class="nav-link" href="https://ddthekidd.statuspage.io/">Status</a>
-        <button onclick="window.location.href='about.html'">About</button>
-        <button onclick="window.location.href='contact.html'">Contact</button>
-        <a class="nav-link" href="https://www.github.com/ddthekidd" target="_blank">GitHub</a>
-      </nav>
-    </header>
-    <main>
-      <h2>Welcome to The ddthekidd Network!</h2>
-      <p>We provide hosting services in Chicago, IL for MeshCore, Meshtastic, Minecraft, Clone Hero, Plex, STORJ, Flightradar24 and more!</p>
-    </main>
-    <footer>
-      <p>&copy; 2026 The ddthekidd Network</p>
-    </footer>
-  </body>
-</html>
+<body>
 
+  <!-- Background -->
+  <div class="bg-wrapper"></div>
+  <div class="bg-overlay"></div>
+
+  <!-- Navigation -->
+  <header>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">The <em>dd</em>thekidd Network</a>
+
+      <button class="hamburger" id="hamburger" aria-label="Open navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li class="status-pill"><a href="https://ddthekidd.statuspage.io/" target="_blank" rel="noopener">● Status</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="https://www.github.com/ddthekidd" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero">
+      <p class="hero-eyebrow">Chicago, IL &nbsp;·&nbsp; Gigabit Fiber Hosting</p>
+      <h1>The <em>ddthekidd</em><br>Network</h1>
+      <p class="hero-sub">
+        Personal-grade infrastructure for community services.
+        Running 24 / 7 on gigabit fiber with backup power.
+      </p>
+      <div class="hero-btns">
+        <a href="https://ddthekidd.statuspage.io/" class="btn btn-primary" target="_blank" rel="noopener">System Status ↗</a>
+        <a href="contact.html" class="btn btn-ghost">Get in Touch</a>
+      </div>
+      <div class="scroll-hint">
+        <span>Services</span>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 3v10M4 9l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services">
+      <p class="section-label">What We Run</p>
+      <h2 class="section-title">Services &amp; Infrastructure</h2>
+      <p class="section-sub">Seven projects hosted out of Chicago, IL on gigabit fiber with redundant connectivity.</p>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <span class="service-icon">📡</span>
+          <div class="service-name">MeshCore</div>
+          <div class="service-desc">Distributed mesh network node serving the Chicago area</div>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">🔗</span>
+          <div class="service-name">Meshtastic</div>
+          <div class="service-desc">Off-grid LoRa messaging relay and MQTT bridge</div>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">⛏️</span>
+          <div class="service-name">Minecraft</div>
+          <div class="service-desc">Java Edition game server — low-latency in the Midwest</div>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">🎸</span>
+          <div class="service-name">Clone Hero</div>
+          <div class="service-desc">Multiplayer rhythm game server for online sessions</div>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">📺</span>
+          <div class="service-name">Plex</div>
+          <div class="service-desc">Personal media streaming with a large local library</div>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">💾</span>
+          <div class="service-name">STORJ</div>
+          <div class="service-desc">Decentralized cloud storage node contributing bandwidth</div>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">✈️</span>
+          <div class="service-name">Flightradar24</div>
+          <div class="service-desc">ADS-B aircraft tracking feeder covering the Chicago metro</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-copy">© 2026 The ddthekidd Network</span>
+      <ul class="footer-links" role="list">
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="https://ddthekidd.statuspage.io/" target="_blank" rel="noopener">Status</a></li>
+        <li><a href="https://www.github.com/ddthekidd" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('navLinks');
+
+    hamburger.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      hamburger.classList.toggle('open', isOpen);
+      hamburger.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Close menu when clicking a link or outside
+    document.addEventListener('click', (e) => {
+      if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+        navLinks.classList.remove('open');
+        hamburger.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', false);
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -1,105 +1,99 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — The ddthekidd Network</title>
   <link rel="shortcut icon" type="image/x-icon" href="ddpic.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
 </head>
-    <meta charset="UTF-8">
-    <title>The ddthekidd Network</title>
-    <style>
-      body {
-        background-image: url("background.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        color: #fff;
-        font-family: sans-serif;
-        margin: 0;
-        padding: 0;
+<body>
+
+  <!-- Background -->
+  <div class="bg-wrapper"></div>
+  <div class="bg-overlay"></div>
+
+  <!-- Navigation -->
+  <header>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">The <em>dd</em>thekidd Network</a>
+
+      <button class="hamburger" id="hamburger" aria-label="Open navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li class="status-pill"><a href="https://ddthekidd.statuspage.io/" target="_blank" rel="noopener">● Status</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="https://www.github.com/ddthekidd" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+
+    <div class="page-hero">
+      <h1 class="page-title">Get in <em>Touch</em></h1>
+      <p class="page-sub">
+        Questions about hosting? Want access to one of our services?
+        Drop us an email.
+      </p>
+    </div>
+
+    <div class="page-content" style="max-width: 620px;">
+      <div class="contact-card">
+        <div class="contact-email">dd @ ddthekidd.net</div>
+        <p class="contact-note">
+          We typically respond within a day or two.
+          Whether you're looking for game server access, mesh networking info,
+          or something custom — feel free to reach out.
+        </p>
+        <div class="contact-links">
+          <a href="https://ddthekidd.statuspage.io/" class="btn btn-ghost" target="_blank" rel="noopener">System Status ↗</a>
+          <a href="https://www.github.com/ddthekidd" class="btn btn-ghost" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-copy">© 2026 The ddthekidd Network</span>
+      <ul class="footer-links" role="list">
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="https://ddthekidd.statuspage.io/" target="_blank" rel="noopener">Status</a></li>
+        <li><a href="https://www.github.com/ddthekidd" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('navLinks');
+
+    hamburger.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      hamburger.classList.toggle('open', isOpen);
+      hamburger.setAttribute('aria-expanded', isOpen);
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+        navLinks.classList.remove('open');
+        hamburger.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', false);
       }
-      header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0.5rem 2rem;
-        background-color: #1c1c1c;
-        height: 50px;
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 10;
-      }
-      nav {
-        display: flex;
-        align-items: center;
-      }
-      nav div a {
-        color: #fff;
-        background-color: transparent;
-        border: none;
-        text-decoration: none;
-        font-size: 2rem;
-      }
-      nav a, nav button {
-        color: #fff;
-        background-color: transparent;
-        border: none;
-        padding: 0.5rem 1rem;
-        margin-right: 1rem;
-        font-size: 1.2rem;
-        cursor: pointer;
-        text-decoration: none;
-      }
-      nav a:first-child, nav button:first-child {
-        margin-left: 0;
-      }
-      nav button:hover, nav a:hover {
-        background-color: #1976d2;
-      }
-      main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        min-height: 100vh;
-        background-color: rgba(0, 0, 0, 0.5);
-        padding-top: 50px;
-      }
-      main h2 {
-        font-size: 3rem;
-        margin-bottom: 1rem;
-      }
-      main p {
-        font-size: 1.2rem;
-        margin: 0 0 2rem;
-      }
-      footer {
-        background-color: #1c1c1c;
-        color: #fff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 5rem;
-      }
-      footer p {
-        margin: 0;
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <div><a href="index.html" class="button-link">The ddthekidd Network</a></div>
-        <a href="index.html">Home</a>
-        <a class="nav-link" href="https://ddthekidd.statuspage.io/">Status</a>
-        <button onclick="window.location.href='about.html'">About</button>
-        <button onclick="window.location.href='contact.html'">Contact</button>
-        <a class="nav-link" href="https://www.github.com/ddthekidd" target="_blank">GitHub</a>
-      </nav>
-    </header>
-    <main>
-      <h2>Contact</h2>
-      <p>dd @ this domain .net</p>
-    </main>
-    <footer>
-      <p>&copy; 2026 The ddthekidd Network</p>
-    </footer>
+    });
+  </script>
+
+</body>
+</html>
