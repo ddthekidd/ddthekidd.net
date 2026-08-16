@@ -3,34 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Video</title>
+  <title>YouTube Fullscreen</title>
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-
     html, body {
       width: 100%;
       height: 100%;
       overflow: hidden;
       background-color: #000;
     }
-
-    video {
+    .video-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none; /* Disables right-clicks and pauses */
+    }
+    iframe {
       width: 100vw;
-      height: 100vh;
-      object-fit: cover; /* Stretches/crops video to fill every pixel of the screen */
-      display: block;
+      height: 56.25vw; /* Forces 16:9 aspect ratio */
+      min-height: 100vh;
+      min-width: 177.77vh; /* Keeps video cropped full screen on tall devices */
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
   </style>
 </head>
 <body>
 
-  <video autoplay loop muted playsinline>
-    <source src="assets/video.mp4" type="video/mp4">
-  </video>
+  <div class="video-background">
+    <iframe 
+      src="https://www.youtube.com/embed/BeylgL9nt-E?enablejsapi=1&autoplay=1&mute=1&controls=0&loop=1&playlist=BeylgL9nt-E&playsinline=1" 
+      title="YouTube video player" 
+      frameborder="0" 
+      allow="autoplay; encrypted-media" 
+      allowfullscreen>
+    </iframe>
+  </div>
 
 </body>
 </html>
